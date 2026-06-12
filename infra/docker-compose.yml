@@ -58,6 +58,10 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
 
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASSWORD: admin
+
     depends_on:
       postgres:
         condition: service_healthy

@@ -2,9 +2,9 @@ fastapi
 uvicorn[standard]
 sqlalchemy
 psycopg2-binary
-
 pydantic
 python-dotenv
 email-validator
 passlib[argon2]
 argon2-cffi
+pika

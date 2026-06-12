@@ -2,6 +2,12 @@ services:
 
   postgres:
     image: postgres:17
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     container_name: backend-postgres
 
     environment:
@@ -17,6 +23,12 @@ services:
 
   rabbitmq:
     image: rabbitmq:4-management
+
+    healthcheck:
+      test: [ "CMD", "rabbitmq-diagnostics", "-q", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     container_name: backend-rabbitmq
 
     environment:
@@ -47,8 +59,10 @@ services:
       POSTGRES_PASSWORD: admin
 
     depends_on:
-      - postgres
-      - rabbitmq
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
 
   auth-service:
     build:
@@ -59,8 +73,38 @@ services:
     ports:
       - "8001:8000"
 
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
     depends_on:
-      - user-service
+      user-service:
+        condition: service_started
+
+  stats-api:
+    build: ../services/stats-service
+    container_name: stats-api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASSWORD: admin
+    ports:
+      - "8002:8000"
+    depends_on:
+      rabbitmq:
+          condition: service_healthy
+
+  stats-worker:
+    build: ../services/stats-service
+    container_name: stats-worker
+    command: python app/consumer.py
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: admin
+      RABBITMQ_PASSWORD: admin
+
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
 volumes:
   postgres_data:

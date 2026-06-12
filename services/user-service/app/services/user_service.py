@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 from app.db.models import User
+from app.publisher import publish_user_created
 
 
 def create_user(
@@ -10,6 +11,10 @@ def create_user(
     user = User(
         email=email,
         password_hash=password_hash,
+    )
+    publish_user_created(
+        user.id,
+        user.email
     )
 
     db.add(user)

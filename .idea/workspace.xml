@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3b1f65-17ac-4544-932d-9bbd4f1ecece" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/auth-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/auth-service/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/app/consumer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-service/app/publisher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BackendProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BackendProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9fa65fc1-fedc-4588-acb6-504816f08ecb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9fa65fc1-fedc-4588-acb6-504816f08ecb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9fa65fc1-fedc-4588-acb6-504816f08ecb/storage_v2/_src_/database/backend_db.CfLwrA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9fa65fc1-fedc-4588-acb6-504816f08ecb/storage_v2/_src_/database/backend_db.CfLwrA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infra/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth-service/app/api/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth-service/app/api/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth-service/app/clients/user_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth-service/app/clients/user_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth-service/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth-service/app/core/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth-service/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth-service/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/app/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/app/api/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/app/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/app/services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-service/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,7 @@
       <updated>1781258050922</updated>
       <workItem from="1781258051931" duration="136000" />
       <workItem from="1781258472567" duration="885000" />
-      <workItem from="1781259486525" duration="9535000" />
+      <workItem from="1781259486525" duration="20098000" />
     </task>
     <servers />
   </component>

@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.55">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>752</IntrospectionStateNumber>
       <ServerVersion>17.10</ServerVersion>
-      <StartupTime>1781280109</StartupTime>
+      <StartupTime>1781292699</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -699,7 +707,7 @@ true posixrules
 13283||10|C|G
 13283||-9223372036854775808|U|G
 13283||10|U|G</Grants>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>752</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>admin</OwnerName>
     </database>
@@ -4127,11 +4135,11 @@ true posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>760</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>760</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>760</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>752</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>752</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>752</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-06-12.16:50:34</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-06-12.19:35:55</LastIntrospectionLocalTimestamp>
       <LastIntrospectionVersion>260210</LastIntrospectionVersion>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
@@ -4139,17 +4147,17 @@ true posixrules
     </schema>
     <sequence id="266" parent="265" name="users_id_seq">
       <DetailsLevel>2</DetailsLevel>
-      <ObjectId>16389</ObjectId>
+      <ObjectId>16385</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>751</StateNumber>
+      <StateNumber>740</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>admin</OwnerName>
     </sequence>
     <table id="267" parent="265" name="users">
       <DetailsLevel>2</DetailsLevel>
-      <ObjectId>16390</ObjectId>
-      <StateNumber>751</StateNumber>
+      <ObjectId>16386</ObjectId>
+      <StateNumber>740</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>admin</OwnerName>
     </table>
@@ -4157,39 +4165,39 @@ true posixrules
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>740</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>16389</SequenceId>
+      <SequenceId>16385</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="269" parent="267" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>740</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="267" name="password_hash">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>740</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="271" parent="267" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16396</ObjectId>
+      <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
+      <StateNumber>740</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="272" parent="267" name="users_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16398</ObjectId>
-      <StateNumber>751</StateNumber>
+      <ObjectId>16394</ObjectId>
+      <StateNumber>740</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -4198,16 +4206,16 @@ true posixrules
     </index>
     <key id="273" parent="267" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16397</ObjectId>
+      <ObjectId>16393</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16396</UnderlyingIndexId>
+      <StateNumber>740</StateNumber>
+      <UnderlyingIndexId>16392</UnderlyingIndexId>
     </key>
     <key id="274" parent="267" name="users_email_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16399</ObjectId>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16398</UnderlyingIndexId>
+      <ObjectId>16395</ObjectId>
+      <StateNumber>740</StateNumber>
+      <UnderlyingIndexId>16394</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

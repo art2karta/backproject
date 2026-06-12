@@ -52,3 +52,16 @@ def create_user_endpoint(
     print("HASH FUNCTION USED")
 
     return user
+
+@router.get("/users/email/{email}")
+def get_user(email: str, db: Session = Depends(get_db)):
+    user = get_user_by_email(db, email)
+
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    return {
+        "id": user.id,
+        "email": user.email,
+        "password_hash": user.password_hash,
+    }

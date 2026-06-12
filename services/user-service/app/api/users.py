@@ -30,7 +30,7 @@ def create_user_endpoint(
     payload: UserCreate,
     db: Session = Depends(get_db),
 ):
-    
+
     existing_user = get_user_by_email(
         db,
         payload.email,
@@ -49,5 +49,6 @@ def create_user_endpoint(
             payload.password
         ),
     )
+    print("HASH FUNCTION USED")
 
     return user

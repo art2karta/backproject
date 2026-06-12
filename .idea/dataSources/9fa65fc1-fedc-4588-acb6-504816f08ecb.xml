@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.55">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>753</IntrospectionStateNumber>
+      <IntrospectionStateNumber>760</IntrospectionStateNumber>
       <ServerVersion>17.10</ServerVersion>
       <StartupTime>1781280109</StartupTime>
       <TimeZones>true ACDT
@@ -707,7 +699,7 @@ true posixrules
 13283||10|C|G
 13283||-9223372036854775808|U|G
 13283||10|U|G</Grants>
-      <IntrospectionStateNumber>753</IntrospectionStateNumber>
+      <IntrospectionStateNumber>760</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>admin</OwnerName>
     </database>
@@ -4135,11 +4127,11 @@ true posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>753</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>753</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>753</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>760</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>760</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>760</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-06-12.16:07:08</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-06-12.16:50:34</LastIntrospectionLocalTimestamp>
       <LastIntrospectionVersion>260210</LastIntrospectionVersion>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>

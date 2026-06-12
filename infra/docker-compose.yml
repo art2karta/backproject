@@ -30,6 +30,19 @@ services:
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
 
+  user-service:
+    build:
+      context: ../services/user-service
+
+    container_name: user-service
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - postgres
+      - rabbitmq
+
 volumes:
   postgres_data:
   rabbitmq_data:

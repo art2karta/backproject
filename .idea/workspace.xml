@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b3b1f65-17ac-4544-932d-9bbd4f1ecece" name="Changes" comment="">
+    <list default="true" id="0b3b1f65-17ac-4544-932d-9bbd4f1ecece" name="Changes" comment="Got new files">
+      <change afterPath="$PROJECT_DIR$/services/stats-service/app/stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/db/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/db/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/schemas/stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/stats-service/services/stats_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infra/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/app/publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/app/publisher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-service/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-service/app/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/stats-service/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/stats-service/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -53,6 +59,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cheshirkkko\BackendProject\services\stats-service\app" />
+      <recent name="C:\Users\Cheshirkkko\BackendProject\services\stats-service" />
       <recent name="C:\Users\Cheshirkkko\BackendProject\infra" />
     </key>
   </component>
@@ -72,7 +80,8 @@
       <updated>1781258050922</updated>
       <workItem from="1781258051931" duration="136000" />
       <workItem from="1781258472567" duration="885000" />
-      <workItem from="1781259486525" duration="20785000" />
+      <workItem from="1781259486525" duration="21268000" />
+      <workItem from="1781445025970" duration="3647000" />
     </task>
     <servers />
   </component>

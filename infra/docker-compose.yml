@@ -4,7 +4,11 @@ services:
     image: postgres:17
 
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U admin" ]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"
+        ]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -106,7 +110,7 @@ services:
   stats-worker:
     build: ../services/stats-service
     container_name: stats-worker
-    command: python app/consumer.py
+    command: python -m app.consumer
     environment:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432

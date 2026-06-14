@@ -1,6 +1,7 @@
 import pika
 import json
 import os
+from datetime import datetime, UTC
 
 RABBITMQ_HOST = os.getenv("RABBITMQ_HOST", "rabbitmq")
 RABBITMQ_USER = os.getenv("RABBITMQ_USER", "admin")
@@ -32,6 +33,7 @@ def publish_user_created(user_id: int, email: str):
         "event": "user_created",
         "user_id": user_id,
         "email": email,
+        "created_at": datetime.now(UTC).isoformat(),
     }
 
     channel.basic_publish(

@@ -12,16 +12,18 @@ def create_user(
         email=email,
         password_hash=password_hash,
     )
-    publish_user_created(
-        user.id,
-        user.email
-    )
 
     db.add(user)
     db.commit()
     db.refresh(user)
 
+    publish_user_created(
+        user.id,
+        user.email
+    )
+
     return user
+
 
 def get_user_by_email(
     db,

@@ -11,9 +11,9 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>756</IntrospectionStateNumber>
       <ServerVersion>17.10</ServerVersion>
-      <StartupTime>1781292699</StartupTime>
+      <StartupTime>1781447054</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -707,7 +707,7 @@ true posixrules
 13283||10|C|G
 13283||-9223372036854775808|U|G
 13283||10|U|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>756</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>admin</OwnerName>
     </database>
@@ -4135,17 +4135,26 @@ true posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>752</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>752</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>752</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>756</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>756</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>756</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-06-12.19:35:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-06-14.14:56:52</LastIntrospectionLocalTimestamp>
       <LastIntrospectionVersion>260210</LastIntrospectionVersion>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="266" parent="265" name="users_id_seq">
+    <sequence id="266" parent="265" name="user_events_id_seq">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16400</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>755</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <sequence id="267" parent="265" name="users_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16385</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4154,14 +4163,74 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>admin</OwnerName>
     </sequence>
-    <table id="267" parent="265" name="users">
+    <table id="268" parent="265" name="user_events">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>16401</ObjectId>
+      <StateNumber>755</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <table id="269" parent="265" name="users">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16386</ObjectId>
       <StateNumber>740</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>admin</OwnerName>
     </table>
-    <column id="268" parent="267" name="id">
+    <column id="270" parent="268" name="id">
+      <DefaultExpression>nextval(&apos;user_events_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>755</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>16400</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="271" parent="268" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>755</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="272" parent="268" name="email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>755</StateNumber>
+      <StoredType>varchar|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="273" parent="268" name="event_type">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>755</StateNumber>
+      <StoredType>varchar|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="274" parent="268" name="created_at">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>755</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="275" parent="268" name="user_events_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16407</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>755</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="276" parent="268" name="user_events_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16408</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>755</StateNumber>
+      <UnderlyingIndexId>16407</UnderlyingIndexId>
+    </key>
+    <column id="277" parent="269" name="id">
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4170,21 +4239,21 @@ true posixrules
       <SequenceId>16385</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="269" parent="267" name="email">
+    <column id="278" parent="269" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>740</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="270" parent="267" name="password_hash">
+    <column id="279" parent="269" name="password_hash">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>740</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="271" parent="267" name="users_pkey">
+    <index id="280" parent="269" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16392</ObjectId>
@@ -4193,7 +4262,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="272" parent="267" name="users_email_key">
+    <index id="281" parent="269" name="users_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16394</ObjectId>
@@ -4204,14 +4273,14 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="273" parent="267" name="users_pkey">
+    <key id="282" parent="269" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16393</ObjectId>
       <Primary>1</Primary>
       <StateNumber>740</StateNumber>
       <UnderlyingIndexId>16392</UnderlyingIndexId>
     </key>
-    <key id="274" parent="267" name="users_email_key">
+    <key id="283" parent="269" name="users_email_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16395</ObjectId>
       <StateNumber>740</StateNumber>
